@@ -1,0 +1,9 @@
+// 1.1. In the REPL, type 3. followed by TAB. What methods can be applied?
+
+// Answer:
+!=   /    >=          ceil          getClass        isPosInfinity   isWhole     shortValue       toDegrees     toOctalString   underlying
+%    <    >>          compare       intValue        isValidByte     longValue   signum           toDouble      toRadians       until
+&    <<   >>>         compareTo     isInfinite      isValidChar     max         to               toFloat       toShort         |
+*    <=   ^           doubleValue   isInfinity      isValidInt      min         toBinaryString   toHexString   unary_+
++    ==   abs         floatValue    isNaN           isValidLong     round       toByte           toInt         unary_-
+-    >    byteValue   floor         isNegInfinity   isValidShort    self        toChar           toLong        unary_~

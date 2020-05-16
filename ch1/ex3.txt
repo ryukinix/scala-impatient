@@ -1,0 +1,4 @@
+// 1.3 Are the res variable var or val?
+
+// Answer:
+val. Trying reassignment will result in a error.
