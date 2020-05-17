@@ -1,5 +1,8 @@
-ch?:
-	bash $@/run.sh
+all:
+	./run.scala ch*
+
+ch%:
+	./run.scala $@
 
 
-.PHONY: ch1 ch2
+.PHONY: ch% all
