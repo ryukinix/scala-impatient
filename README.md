@@ -2,7 +2,7 @@
 
 # Description
 
-Exercises of the book: Scala For The Impatient Ed2 (2012).
+Exercises of the book: Scala For The Impatient Ed2 (2016).
 
 # Running exercises
 
