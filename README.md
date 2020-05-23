@@ -4,10 +4,16 @@
 
 Exercises of the book: Scala For The Impatient Ed2 (2016).
 
-# Running exercises
+# Run exercises via SBT
 
-Ensure `Scala` is installed, assumed v2.11.22. Execute `./run.scala`,
-examples:
+``` bash
+sbt test
+```
+
+# [DEPRECATED] Running exercises as HACKER
+
+Ensure `Scala` is installed, assumed v2.11.22. Enter in `hack` folder
+and execute `./run.scala`, examples:
 
 ```bash
 ./run.scala ch01/ex02.scala # print source code + execute scala code
