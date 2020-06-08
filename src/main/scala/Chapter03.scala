@@ -62,12 +62,29 @@ object Chapter03 {
   // 6. How do you rearrange the elements of an Array[Int] so that they
   // appear in reverse sorted order? How do you do the same with an
   // ArrayBuffer[Int]?
-
   def ex6(array: Array[Int]) = {
     array.reverse
   }
 
   def ex6(array: ArrayBuffer[Int]) = {
     array.reverse
+  }
+
+  // 7. Write a code snippet that produces all values from an array with
+  // duplicates removed. (Hint: Look at Scaladoc.)
+  def ex7(array: Array[Int]) = {
+    array.distinct
+  }
+
+  def ex8(array: Array[Int]) = {
+    val a = ArrayBuffer.from(array)
+    a.indices
+      .filter({x => a(x) < 0})
+      .drop(1)
+      .reverse
+      .foreach {i =>
+        a.remove(i)
+      }
+    a.toArray
   }
 }
