@@ -76,6 +76,26 @@ object Chapter03 {
     array.distinct
   }
 
+  // 8. Suppose you are given an array buffer of integers and want to
+  // remove all but the first negative number. Here is a sequential
+  // solution that sets a flag when the first negative number is called,
+  // then removes all elements beyond.
+  /*
+          var first = true
+          var n = a.length
+          var i = 0
+          while (i < n) {
+            if (a(i) >= 0) i += 1
+            else {
+              if (first) { first = false; i += 1 }
+              else { a.remove(i); n -= 1 }
+            }
+          }
+   */
+  // This is a complex and inefficient solution. Rewrite it in Scala by
+  // collecting positions of the negative elements, dropping the first
+  // element, reversing the sequence, and calling a.remove(i) for each
+  // index.
   def ex8(array: Array[Int]) = {
     val a = ArrayBuffer.from(array)
     a.indices
@@ -86,5 +106,29 @@ object Chapter03 {
         a.remove(i)
       }
     a.toArray
+  }
+
+  // 9. Improve the solution of the preceding exercise by collecting the
+  // positions that should be moved and their target positions. Make
+  // those moves and truncate the buffer. Don’t copy any elements before
+  // the first unwanted element.
+  def ex9(array: ArrayBuffer[Int]) = {
+    val negatives = array
+      .indices
+      .filter {x => array(x) < 0}
+      .drop(1)
+
+    val target = array
+      .indices
+      .filter(!negatives.contains(_))
+      .drop(1)
+      .takeRight(negatives.length)
+
+    for (from <- negatives; to <- target) {
+      val tmp = array(to)
+      array(to) = array(from)
+      array(from) = tmp
+    }
+    array.dropRight(negatives.length)
   }
 }

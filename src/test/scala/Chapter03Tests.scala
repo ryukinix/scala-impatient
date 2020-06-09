@@ -45,4 +45,12 @@ class Chapter03Tests extends FunSuite with Matchers {
     Chapter03.ex8(Array(-1, -2, -3)) shouldBe Array(-1)
     Chapter03.ex8(Array()) shouldBe Array()
   }
+
+  test("ex9") {
+    Chapter03.ex9(ArrayBuffer(1, -1, 2, 3)) shouldBe ArrayBuffer(1, -1, 2, 3)
+    Chapter03.ex9(ArrayBuffer(-1, 2, 3)) shouldBe ArrayBuffer(-1, 2, 3)
+    Chapter03.ex9(ArrayBuffer(-1, -2, 3)) shouldBe ArrayBuffer(-1, 3)
+    Chapter03.ex9(ArrayBuffer(-1, -2, -3)) shouldBe ArrayBuffer(-1)
+    Chapter03.ex9(ArrayBuffer()) shouldBe ArrayBuffer()
+  }
 }
