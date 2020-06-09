@@ -1,8 +1,9 @@
-import scala.collection.mutable.ArrayBuffer
-import org.scalatest._
+import scala.collection.mutable.{ArrayBuffer, Buffer}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
 
-class Chapter03Tests extends FunSuite with Matchers {
+class Chapter03Tests extends AnyFunSuite with Matchers {
   test("ex1") {
     val array = Chapter03.ex1(5, 10)
     array.length shouldBe 5

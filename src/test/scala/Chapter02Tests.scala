@@ -1,7 +1,7 @@
-import org.scalatest._
+import org.scalatest.funsuite.AnyFunSuite
 
 
-class Chapter02Tests extends FunSuite {
+class Chapter02Tests extends AnyFunSuite {
   test("ex1") {
     assert(Chapter02.ex1(10) equals 1)
     assert(Chapter02.ex1(-5) equals -1)

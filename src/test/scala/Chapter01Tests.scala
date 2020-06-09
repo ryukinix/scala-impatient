@@ -1,7 +1,7 @@
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
 
-class Chapter01Tests extends FunSuite {
+class Chapter01Tests extends AnyFunSuite {
   test("ex1") {
     Chapter01.ex1
   }
