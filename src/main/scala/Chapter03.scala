@@ -1,6 +1,6 @@
 import scala.util.Random
 import scala.collection.mutable.ArrayBuffer
-
+import java.util.TimeZone
 
 object Chapter03 {
 
@@ -130,5 +130,11 @@ object Chapter03 {
       array(from) = tmp
     }
     array.dropRight(negatives.length)
+  }
+
+  def ex10(timeZones: Array[String] = TimeZone.getAvailableIDs) = {
+    timeZones
+      .filter(_.startsWith("America"))
+      .map(_.replace("America/", ""))
   }
 }

@@ -53,4 +53,8 @@ class Chapter03Tests extends FunSuite with Matchers {
     Chapter03.ex9(ArrayBuffer(-1, -2, -3)) shouldBe ArrayBuffer(-1)
     Chapter03.ex9(ArrayBuffer()) shouldBe ArrayBuffer()
   }
+
+  test("ex10") {
+    Chapter03.ex10(Array("America/Fortaleza", "Asia/Tokyo")) shouldBe Array("Fortaleza")
+  }
 }
