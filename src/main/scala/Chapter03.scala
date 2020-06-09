@@ -132,9 +132,29 @@ object Chapter03 {
     array.dropRight(negatives.length)
   }
 
+  // 10. Make a collection of all time zones returned by
+  // java.util.TimeZone.getAvailableIDs that are in America. Strip off
+  // the "America/" prefix and sort the result.
   def ex10(timeZones: Array[String] = TimeZone.getAvailableIDs) = {
     timeZones
       .filter(_.startsWith("America"))
       .map(_.replace("America/", ""))
+  }
+
+  // 11. Import java.awt.datatransfer._ and make an object of type
+  // SystemFlavorMap with the call:
+  //
+  //   val flavors = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
+  //
+  // Then call the getNativesForFlavor method with parameter
+  // DataFlavor.imageFlavor and get the return value as a Scala buffer.
+  def ex11() = {
+    // import scala.collection.JavaConversions.asScalaBuffer // deprecated since 2.12.X
+    // import scala.collection.JavaConverters._ // deprecated since 2.13.X
+    import scala.jdk.CollectionConverters._
+    import scala.collection.mutable.Buffer
+    import java.awt.datatransfer._
+    val flavors = SystemFlavorMap.getDefaultFlavorMap().asInstanceOf[SystemFlavorMap]
+    flavors.getNativesForFlavor(DataFlavor.imageFlavor).asScala
   }
 }

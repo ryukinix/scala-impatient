@@ -57,4 +57,13 @@ class Chapter03Tests extends FunSuite with Matchers {
   test("ex10") {
     Chapter03.ex10(Array("America/Fortaleza", "Asia/Tokyo")) shouldBe Array("Fortaleza")
   }
+
+  test("ex11") {
+    val check = Chapter03.ex11() match {
+      case _: Buffer[String] => true
+      case _ => false
+    }
+
+    assert(check)
+  }
 }
