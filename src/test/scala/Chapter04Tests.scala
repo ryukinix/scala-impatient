@@ -1,6 +1,7 @@
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 import scala.collection.mutable
+import scala.collection.immutable.SortedMap
 import java.{util => ju}
 
 class Chapter04Tests extends AnyFunSuite with Matchers {
@@ -21,8 +22,8 @@ class Chapter04Tests extends AnyFunSuite with Matchers {
   }
 
   test("ex4") {
-    Chapter04.ex4("pa pa la la la") shouldBe mutable.SortedMap("la" -> 3, "pa" -> 2)
-    Chapter04.ex4("la la ba ba ba") shouldBe mutable.SortedMap("ba" -> 3, "la" -> 2)
+    Chapter04.ex4("pa pa la la la") shouldBe SortedMap("la" -> 3, "pa" -> 2)
+    Chapter04.ex4("la la ba ba ba") shouldBe SortedMap("ba" -> 3, "la" -> 2)
   }
 
   test("ex5") {
