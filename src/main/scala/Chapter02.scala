@@ -1,3 +1,5 @@
+package impatient
+
 object Chapter02 {
 
   // 2.1. The signum of a number is 1 if the number is positive, –1 if it is

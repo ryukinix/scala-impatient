@@ -1,3 +1,5 @@
+package impatient
+
 import scala.collection.mutable
 import scala.collection.immutable.SortedMap
 import java.{util => ju}

@@ -1,4 +1,7 @@
+package impatient
+
 import scala.beans.BeanProperty
+
 object Chapter05 {
 
   // 1. Improve the Counter class in Section 5.1, “Simple Classes and
