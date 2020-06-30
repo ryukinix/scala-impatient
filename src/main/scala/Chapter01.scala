@@ -1,3 +1,5 @@
+package impatient
+
 object Chapter01 {
 
   // 1.1. In the REPL, type 3. followed by TAB. What methods can be applied?

@@ -1,3 +1,5 @@
+package impatient
+
 import scala.util.Random
 import scala.collection.mutable.ArrayBuffer
 import java.util.TimeZone

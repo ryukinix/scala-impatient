@@ -1,3 +1,5 @@
+package impatient
+
 import org.scalatest.funsuite.AnyFunSuite
 
 
