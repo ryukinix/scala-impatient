@@ -2,6 +2,7 @@ package impatient
 
 import java.awt
 
+// Title: Objects
 object Chapter06 {
 
   // 1. Write an object Conversions with methods inchesToCentimeters,

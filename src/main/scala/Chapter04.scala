@@ -5,6 +5,7 @@ import scala.collection.immutable.SortedMap
 import java.{util => ju}
 import java.lang.System
 
+// Title: Maps and Tuples
 object Chapter04 {
 
   // 1. Set up a map of prices for a number of gizmos that you

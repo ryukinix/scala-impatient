@@ -4,6 +4,7 @@ import scala.util.Random
 import scala.collection.mutable.ArrayBuffer
 import java.util.TimeZone
 
+// Title: Working with Arrays
 object Chapter03 {
 
   def randomInteger(start: Int, end: Int): Int = {
