@@ -177,7 +177,7 @@ package Chapter07 {
     import java.lang.System
     // alternative:
     // package scala.io
-    import scala.io
+    import scala.io.StdIn
     val userName = System.getProperty("user.name")
     print(f"Hello, ${userName}! Type your password: ")
     val password = StdIn.readLine()
